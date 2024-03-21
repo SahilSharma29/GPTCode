@@ -1,3 +1,5 @@
+// Summary
+
 // const express = require("express");
 // const fetch = require("node-fetch");
 import express from "express";
@@ -43,3 +45,88 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+// Bard Part
+
+// // Import required modules
+// import express from "express";
+// import Bard from "bard-ai";
+
+// // Create an instance of express
+// const app = express();
+
+// // Set the Bard API key
+// process.env.BARD_API_KEY = "AIzaSyCTYkCwyf7PR-SVIdrFtgy5Ant9LBdEyqc";
+
+// // Define a route
+// app.get("/", (req, res) => {
+//   res.send("Hello, World!");
+// });
+
+// app.get("/bard", async (req, res) => {
+//   try {
+//     const bard = new Bard();
+
+//     const response = await bard.ask("What is Bard?");
+
+//     const bardResponse = response.data;
+
+//     console.log(bardResponse);
+
+//     res.send(bardResponse);
+//   } catch (error) {
+//     console.error("Error:", error);
+//     res.status(500).send("Internal Server Error");
+//   }
+// });
+
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
+
+// Import required modules
+// import express from "express";
+
+// Gemini Part
+// const express = require("express");
+// const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+// // import Bard from "bard-ai";
+// const { BardAPI } = require("bard-api-node");
+
+// // Create an instance of express
+// const app = express();
+
+// // Set the Bard API key
+// process.env.BARD_API_KEY = "AIzaSyCTYkCwyf7PR-SVIdrFtgy5Ant9LBdEyqc";
+
+// // Define a route
+// // app.get("/", (req, res) => {
+// //   res.send("Hello, World!");
+// // });
+
+// app.get("/", async (req, res) => {
+//   try {
+//     const genAI = new GoogleGenerativeAI(
+//       "AIzaSyCTYkCwyf7PR-SVIdrFtgy5Ant9LBdEyqc"
+//     );
+
+//     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+//     const prompt = "Write a story about one piece anime";
+
+//     const result = await model.generateContent(prompt);
+//     const response = await result.response;
+//     const text = response.text();
+//     res.send("Hello, World!");
+//     console.log(text);
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
+// });
+
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
